@@ -1,4 +1,4 @@
-package com.back.jpa.entity;
+package com.back.global.jpa.entity;
 
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
@@ -10,7 +10,6 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 @Getter
-// 모든 엔티티들의 조상
 public abstract class BaseEntity {
     public abstract int getId();
 
