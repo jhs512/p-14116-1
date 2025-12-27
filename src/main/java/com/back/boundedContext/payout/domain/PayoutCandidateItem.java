@@ -24,12 +24,12 @@ public class PayoutCandidateItem extends BaseIdAndTime {
     private PayoutMember payer;
     @ManyToOne(fetch = LAZY)
     private PayoutMember payee;
-    private int amount;
+    private long amount;
     @OneToOne(fetch = LAZY)
     @Setter
     private PayoutItem payoutItem;
 
-    public PayoutCandidateItem(PayoutEventType eventType, String relTypeCode, int relId, LocalDateTime paymentDate, PayoutMember payer, PayoutMember payee, int amount) {
+    public PayoutCandidateItem(PayoutEventType eventType, String relTypeCode, int relId, LocalDateTime paymentDate, PayoutMember payer, PayoutMember payee, long amount) {
         this.eventType = eventType;
         this.relTypeCode = relTypeCode;
         this.relId = relId;
